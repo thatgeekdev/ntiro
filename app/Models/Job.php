@@ -45,7 +45,7 @@ class Job extends Model
 
     public static array $experience = [
         'entry', 
-        'mid', 
+        'intermediate', 
         'senior'
     ];
     public static array $status = [
