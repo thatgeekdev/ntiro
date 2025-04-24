@@ -35,7 +35,7 @@ class Job extends Model
         'IT', 
         'HR', 
         'Finance', 
-        'Msarketing'
+        'Marketing'
     ];
     public static array $work_modes = [
         'remote',
