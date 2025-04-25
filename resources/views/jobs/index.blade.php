@@ -32,7 +32,7 @@
 
             </div>
         </div>
-        <button class="w-full rounded-md border border-slate-300 bg-white px-2.5 py-1.5 text-center text-sm font-semibold text-balck shadow-sm hover::bg-slate-100">Filter</button>
+        <x-button class="w-full">Filter</x-button>
     </form>
     </x-card>
 
