@@ -30,17 +30,17 @@ class Job extends Model
         'experience' => 'string'
     ];
 
-    public static array $categories = [
-        'general', 
-        'it', 
-        'hr', 
-        'finance', 
-        'marketing'
+    public static array $category = [
+        'General', 
+        'IT', 
+        'HR', 
+        'Finance', 
+        'Marketing'
     ];
     public static array $work_modes = [
-        'remote', 
-        'onsite', 
-        'hybrid'
+        'remote',
+        'hybrid', 
+        'onsite' 
     ];
 
     public static array $experience = [
