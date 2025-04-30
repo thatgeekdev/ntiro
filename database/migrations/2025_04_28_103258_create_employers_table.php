@@ -31,8 +31,8 @@ return new class extends Migration
     public function down(): void
     {
         // first we drop de foreign key then we drop the table employers
-        Schema::table('jobs',function (Blueprint $table) {
-            $table->dropForeignIdFor(\App\Models\Employer::class);
+        Schema::table('jobs', function (Blueprint $table) {
+            $table->dropForeign(['employer_id']);
         });
 
         Schema::dropIfExists('employers');
