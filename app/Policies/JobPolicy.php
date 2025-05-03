@@ -66,6 +66,8 @@ class JobPolicy
 
     public function apply(User $user, Job $job): bool
     {
-        return false;
+        return !$job->hasUserApplied($user); // Check if the user has already applied for the job
+            // ? Response::deny('You have already applied for this job.')
+            // : Response::allow(); // Allow the user to apply for the job
     }
 }
