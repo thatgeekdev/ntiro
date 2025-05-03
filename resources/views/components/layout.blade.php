@@ -50,6 +50,14 @@
     </ul>
 
 </nav>
+@if (session('success'))
+    <div class="my-8 rounded-md border-l-4 border-green-300 bg-green-100 p-4 text-sm text-green-700 opacity-74" role="alert">
+        <p class="font-bold">
+            {{ session('success') }}
+        </p>
+    </div>
+@endif
+
     {{ $slot }}
 </body>
 
