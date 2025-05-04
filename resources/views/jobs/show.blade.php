@@ -20,7 +20,7 @@
             @foreach ($job->employer->jobs as $otherjob)
             <div class="mb-4 flex justify-between">
                 <div>
-                    <div class="text-slate-700">
+                    <div class="text-slate-700 hover:underline">
                         <a href="{{ route('jobs.show', $otherjob) }}">{{ $otherjob->title }}</a>
                     </div>
                     <div class="text-xs text-slate-500">
