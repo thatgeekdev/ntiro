@@ -7,11 +7,11 @@
         <form action="{{ route('auth.store') }}" method="POST">
             @csrf
             <div class="mb-8">
-                <label for="email" class="mb-2 block text-sm font-medium text-slate-900">E-mail</label>
+                <x-label for="email" :required="true">E-mail</x-label>
                 <x-text-input type="email" name="email" required/>
             </div>
             <div class="mb-8">
-                <label for="password" class="mb-2 block text-sm font-medium text-slate-900">Password</label>
+                <x-label for="password" :required="true">Password</x-label>
                 <x-text-input type="password" name="password" required/>
             </div>
 
