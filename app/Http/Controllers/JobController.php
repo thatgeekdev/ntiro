@@ -21,7 +21,7 @@ class JobController extends Controller
         );
 
         return view('jobs.index',
-             ['jobs' => Job::with('employer')->filter($filters)->get()]);
+             ['jobs' => Job::with('employer')->latest()->filter($filters)->get()]);
     }
 
     /**
