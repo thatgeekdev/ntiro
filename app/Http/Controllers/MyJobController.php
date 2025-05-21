@@ -11,6 +11,7 @@ class MyJobController extends Controller
 
     public function index()
     {
+        $this->authorize('viewAnyEmployes', Job::class); // Check if the user (employes) can view any job
         return view('my_jobs.index', [
             'jobs' => request()->user()->employer
             ->jobs()
@@ -24,6 +25,7 @@ class MyJobController extends Controller
      */
     public function create()
     {
+        $this->authorize('create', Job::class);
         return view('my_jobs.create');
     }
 
@@ -32,6 +34,7 @@ class MyJobController extends Controller
      */
     public function store(JobRequest $request)
     {
+        $this->authorize('create', Job::class);
         request()->user()->employer->jobs()->create($request->validated()); //Job create on the employer model
 
         return redirect()->route('my-jobs.index')
@@ -51,6 +54,7 @@ class MyJobController extends Controller
      */
     public function edit(Job $myJob)
     {
+        $this->authorize('edit', Job::class);
         return view('my_jobs.edit', [
             'job' => $myJob,
         ]);
@@ -61,6 +65,8 @@ class MyJobController extends Controller
      */
     public function update(JobRequest $request, Job $myJob)
     {
+        
+        $this->authorize('update', $myJob);
         $myJob->update($request->validated());
 
         return redirect()->route('my-jobs.index')
