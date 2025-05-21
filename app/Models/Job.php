@@ -22,12 +22,13 @@ class Job extends Model
         'location',
         'category',
         'experience',
-        'status',
-        'work_modes',
-        'company_name',
-        'expires_at',
-        'views',
-        'applications',
+        //to improve
+        // 'status',
+        // 'work_modes',
+        // 'company_name',
+        // 'expires_at',
+        // 'views',
+        // 'applications',
     ];
 
     protected $casts = [
