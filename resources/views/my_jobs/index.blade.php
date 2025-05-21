@@ -19,6 +19,9 @@
                     @empty
                         <div class="text-center font-medium">No applications yet</div>
                     @endforelse
+                    <div class="flex sapce-x-2">
+                        <x-link-button href="{{route('my-jobs.edit', $job) }}">Edit Job</x-link-button>
+                    </div>
                 </div>
             </x-job-card>
         @empty
