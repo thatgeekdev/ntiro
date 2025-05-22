@@ -13,7 +13,10 @@ class RadioGroup extends Component
      */
     public function __construct(
         public string $name,
-        public array $options
+        public array $options,
+        public ?bool $allOption = true,
+        public ?string $value = null,
+
         //Associative array of options with keys as values and values as labels, whe we use array_is_list of php 8.1 +
         // public array $options = ['option1' => 'Option 1', 'option2' => 'Option 2']
     )

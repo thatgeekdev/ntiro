@@ -9,11 +9,12 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Query\Builder as QueryBuilder;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Job extends Model
 {
     /** @use HasFactory<\Database\Factories\JobFactory> */
-    use HasFactory;
+    use HasFactory, SoftDeletes;
         
     protected $fillable = [
         'title',
@@ -22,12 +23,13 @@ class Job extends Model
         'location',
         'category',
         'experience',
-        'status',
-        'work_modes',
-        'company_name',
-        'expires_at',
-        'views',
-        'applications',
+        //to improve
+        // 'status',
+        // 'work_modes',
+        // 'company_name',
+        // 'expires_at',
+        // 'views',
+        // 'applications',
     ];
 
     protected $casts = [
