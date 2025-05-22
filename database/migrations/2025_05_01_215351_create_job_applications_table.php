@@ -16,6 +16,7 @@ return new class extends Migration
 
             $table->foreignIdFor(\App\Models\User::class)->constrained();
             $table->foreignIdFor(\App\Models\Job::class)->constrained();
+                   //->onDelete('cascade'); whenever the job is delete, the job apllication will also be deleted
 
             $table->unsignedInteger('expected_salary');
 
